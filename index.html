@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#101522" />
+  <title>忧黎</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main id="app">
+    <section id="title-screen" class="screen active">
+      <div class="title-card">
+        <p class="eyebrow">移动端纯文字 Galgame</p>
+        <h1>忧黎</h1>
+        <p class="tagline">那盏补光灯熄灭之前，<br />你是我唯一想带走的战利品。</p>
+        <div class="menu-buttons">
+          <button id="start-btn" class="primary-btn">开始游戏</button>
+          <button id="continue-btn" class="ghost-btn">继续游戏</button>
+          <button id="endings-btn" class="ghost-btn">结局回收</button>
+        </div>
+        <p class="notice">本作涉及抑郁与复诊等内容。故事不将疾病浪漫化，也不以陪伴替代专业治疗。</p>
+      </div>
+    </section>
+
+    <section id="game-screen" class="screen">
+      <header class="top-bar">
+        <button id="back-title-btn" aria-label="返回标题">‹</button>
+        <div>
+          <p id="chapter-label">序章</p>
+          <h2 id="scene-title">那把枪的配法</h2>
+        </div>
+        <button id="save-btn">存档</button>
+      </header>
+
+      <section id="story-panel">
+        <div id="speaker" class="speaker hidden"></div>
+        <div id="text-box" class="text-box"></div>
+        <div id="choices" class="choices hidden"></div>
+      </section>
+
+      <footer class="hint-bar">
+        <span id="hint">点击文字区域继续</span>
+      </footer>
+    </section>
+
+    <section id="ending-screen" class="screen">
+      <div class="ending-card">
+        <p class="eyebrow">结局回收</p>
+        <h2>已解锁结局</h2>
+        <ul id="ending-list"></ul>
+        <button id="ending-back-btn" class="primary-btn">返回标题</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="./data/story.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
